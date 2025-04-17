@@ -19,7 +19,8 @@ russian = {2, 3, 4}
 
 while True:
     answer = input('1 - список студентов, 2 - имена студентов на предмете, 3 - список предметов, которые посещает студент'
-                   '4 - студенты, которые посещают все предметы')
+                   '4 - студенты, которые посещают все предметы'
+                   '5 - добавить студента')
 
     if answer == '1':
         print(('id', 'name', 'age'))
@@ -50,3 +51,8 @@ while True:
     elif answer == '4':
         inter1 = math.intersection(physics)
         print(inter1.intersection(russian))
+    elif answer == '5':
+        name = input('Как зовут?')
+        age = int(input('Сколько лет?'))
+        id = students[len(students) - 1][0] + 1
+        students.append((id, name, age))
